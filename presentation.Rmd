@@ -181,7 +181,7 @@ We can limit the range of random projections in order to focus on certain areas.
 
 - Research into **interpretability** measures has just started!
 
-- New pre- and postprocessing wrappers might be required.
+- New pre- and post-processing methods might be required.
 ]
 
 .pull-right[
@@ -193,18 +193,13 @@ We can limit the range of random projections in order to focus on certain areas.
 
 
 ---
-# Thank you for your attention
-
-
+# Thank you for your attention!
 
 ### Check out our progress:
 
 ```url
 https://github.com/pfistfl/autoxgboostMC
 ```
-
-
-
 
 ### Suggestions, Interesting applications?
 
