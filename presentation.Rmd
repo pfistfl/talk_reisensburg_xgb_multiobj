@@ -191,6 +191,27 @@ We can limit the range of random projections in order to focus on certain areas.
 - Several tools for multi-criteria optimization already exist, further research might be beneficial.
 ]
 
+
+---
+# Thank you for your attention
+
+
+
+### Check out our progress:
+
+```url
+https://github.com/pfistfl/autoxgboostMC
+```
+
+
+
+
+### Suggestions, Interesting applications?
+
+```url
+florian.pfisterer@stat.uni-muenchen.de
+```
+
 ---
 # References
 
