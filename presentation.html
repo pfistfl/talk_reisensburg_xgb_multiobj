@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Multi-Objective AutoML</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Florian Pfisterer" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Multi-Objective AutoML
+### Florian Pfisterer
+### LMU Munich
+### 2019/07/02
+
+---
+
+
+
+
+
+![:scale 150%](drawings/plyr.png)
+
+---
+![:scale 150%](drawings/plyr2.png)
+
+---
+![:scale 150%](drawings/plyr3.png)
+
+---
+![:scale 150%](drawings/plyr4.png)
+
+---
+![:scale 150%](drawings/plyr5.png)
+
+
+---
+# A short intro to AutoML
+
+- Automatically obtain an optimal model for a dataset
+
+- Many different flavours exist!
+
+- The system performs model selection, tuning, ...
+
+![:scale 100%](drawings/automl.png)
+
+
+## Why? 
+
+- Many parts of the typical ML pipeline can be easily automized!
+
+- Humans are single-threaded and have limited RAM!
+
+
+---
+# Multi-Objective AutoML - Why?
+
+- Current AutoML approaches are **very good** at optimizing predictive performance!
+
+- Many applications require models that are *good* with respect to multiple 
+  objectives.
+  
+- **But:** Current AutoML approaches do not really incorporate this!
+
+## Problem:
+
+Users either use AutoML without considering other objectives,
+or do everything manually!
+
+
+---
+# Interesting Objectives:
+
+## Fairness
+
+  ... usually means that our model  `\(f_\theta\)` trained on a dataset `\(X\)` and target `\(y\)` does not discriminate 
+  between a set of protected attributes `\(A\)`, such as ethnicity and gender.
+  
+  There are many conflicting definitions of fairness, to give two examples:
+  
+- Equalized Odds (Hardt, 2016)
+
+    `\(Pr\{\hat{Y} = 1 | A = 0, Y = y\} = Pr\{\hat{Y} = 1 | A = 1, Y = y\}, y \in \{0,1\}\)`
+      
+      
+- Equal Opportunity (Hardt, 2016)
+  
+    `\(Pr\{\hat{Y} = 1 | A = 0, Y = 1\} = Pr\{\hat{Y} = 1 | A = 1, Y = 1\}\)`
+    
+    
+---
+# Interesting Objectives II:
+
+## Interpretability 
+
+  Many post-hoc interpretability methods allow us to understand what our model learns.
+  But: They mostly rely on **local** and **linear** explanations.
+  
+- Main Effect Complexity
+
+  `\(\rightarrow\)` How well can main effects be approximated by linear segments?
+  
+- Interaction Strength 
+
+  `\(\rightarrow\)` How much of a model's prediction can not be explained by main effects?
+  
+- Sparsity
+  
+---
+# Interesting Objectives III:
+  
+## Robustness
+
+- Robustness to adversarial examples, perturbations , ...
+  
+## Memory and Inference Time
+
+- Deploying on mobile devices, scoring *http* requests
+  
+## ...
+
+
+
+---
+# AutoXgboostMC 
+
+.pull-left[
+- We propose a simplified AutoML system in order to explore the setting 
+
+- Uses XGboost models, and a limited amount of preprocessing steps
+
+- Optimize using Multi-Objective Bayesian Optimization
+
+- Human-in-the-loop: 
+  - User can stop and restart the process, adjust parameters.
+  - User specifies area, the optimization algorithm should focus in.
+]
+
+&lt;style type="text/css"&gt;
+.small{font-size: 12pt;}
+&lt;/style&gt;
+
+.pull-right[
+![:scale 90%](drawings/paretofront.png)
+.small[
+**parEgo** uses random projections in order to explore the pareto front.
+We can limit the range of random projections in order to focus on certain areas.
+]
+]
+
+---
+# Workflow
+
+![:scale 100%](drawings/schemaautoml.png)
+
+---
+## Pareto Front
+
+![:scale 200%](drawings/paretoplots.png)
+
+  .small[Pareto front for Fairness and MMCE after 20, 70 and 120 iterations.]
+
+&lt;style type="text/css"&gt;
+.blue{color: blue;}
+&lt;/style&gt;
+
+- Grey line contains Pareto optimal points
+
+- .blue[Blue segment:] Pareto optimal for weights from `\([0.1; 0.9]\)` to `\([0.9;0.1]\)`.
+
+
+---
+# References
+
+- Hardt, M., Price, E., Srebro, N., et al. (2016).
+  Equality of opportunity in supervised learning. 
+  In Advances in neural information processing systems
+  
+- Molnar, C., Casalicchio, G., and Bischl, B. (2019).
+  Quantifying interpretability ofarbitrary machine learning models through functional decomposition.
+  arXiv preprintarXiv:1904.03867.
+  
+- Thomas, J., Coors, S., and Bischl, B. (2018).
+  Automatic gradient boosting. 
+  International Workshop on Automatic Machine Learning at ICML.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
