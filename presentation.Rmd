@@ -76,7 +76,7 @@ or do everything manually!
   ... usually means that our model  $f_\theta$ trained on a dataset $X$ and target $y$ does not discriminate 
   between a set of protected attributes $A$, such as ethnicity and gender.
   
-  There are many conflicting definitions of fairness, to give two examples:
+  There are many (often conflicting) definitions of fairness, to give two examples:
   
 - Equalized Odds (Hardt, 2016)
 
@@ -96,15 +96,17 @@ or do everything manually!
   Many post-hoc interpretability methods allow us to understand what our model learns.
   But: They mostly rely on **local** and **linear** explanations.
   
-- Main Effect Complexity
+- Main Effect Complexity (Molnar, 2019)
 
   $\rightarrow$ How well can main effects be approximated by linear segments?
   
-- Interaction Strength 
+- Interaction Strength (Molnar, 2019)
 
-  $\rightarrow$ How much of a model's prediction can not be explained by main effects?
+  $\rightarrow$ How much of a model's prediction can **not** be explained by main effects?
   
 - Sparsity
+
+  Even simple models with $1000's$ of predictors are hard to grasp
   
 ---
 # Interesting Objectives III:
@@ -164,6 +166,8 @@ We can limit the range of random projections in order to focus on certain areas.
 .blue{color: blue;}
 ```
 
+- Limit the range of random projections (weights for the measures) in order to focus on specific areas.
+
 - Grey line contains Pareto optimal points
 
 - .blue[Blue segment:] Pareto optimal for weights from $[0.1; 0.9]$ to $[0.9;0.1]$.
@@ -185,10 +189,14 @@ We can limit the range of random projections in order to focus on certain areas.
 ]
 
 .pull-right[
-![:scale 90%](drawings/challenges.png)
+![:scale 80%](drawings/challenges.png)
 
 
 - Several tools for multi-criteria optimization already exist, further research might be beneficial.
+
+- Tools to increase **transparency** and **trust** in AutoML systems are important! 
+  Human-in-the-loop approaches can help here!
+
 ]
 
 
