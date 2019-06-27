@@ -1,6 +1,6 @@
 ---
 title: "Multi-Objective AutoML"
-author: "Florian Pfisterer"
+author: "Florian Pfisterer, Stefan Coors, Janek Thomas, Bernd Bischl"
 institute: "LMU Munich"
 date: "2019/07/02"
 output:
@@ -46,10 +46,10 @@ options(htmltools.dir.version = FALSE)
 
 
 ## Why? 
-
-- Many parts of the typical ML pipeline can be easily automized!
-
-- Humans are single-threaded and have limited RAM!
+- Many steps of the typical ML pipeline can be easily automized!
+- Computers are efficient in trying out many possibilities
+- Efficient search strategies exist!
+- Humans are single-threaded and have little RAM!
 
 
 ---
@@ -121,7 +121,10 @@ or do everything manually!
   
 ## ...
 
+---
+# Constraint vs. Multi-Objective Optimization
 
+- An alternative 
 
 ---
 # AutoXgboostMC 
