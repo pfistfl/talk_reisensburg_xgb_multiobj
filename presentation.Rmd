@@ -122,9 +122,13 @@ or do everything manually!
 ## ...
 
 ---
-# Constraint vs. Multi-Objective Optimization
+# Constrained vs. Multi-Objective Optimization
 
-- An alternative 
+- An alternative to our approach would be putting constraints on e.g fairness measures.
+
+  $\rightarrow$ users do not always want hard constraints but rather choose a trade-off.
+  
+  $\rightarrow$ ...
 
 ---
 # AutoXgboostMC 
@@ -148,7 +152,7 @@ or do everything manually!
 .pull-right[
 ![:scale 90%](drawings/paretofront.png)
 .small[
-**parEgo** uses random projections in order to explore the pareto front.
+**parEgo** (Knowles, ) uses random projections in order to explore the pareto front.
 We can limit the range of random projections in order to focus on certain areas.
 ]
 ]
@@ -179,7 +183,7 @@ We can limit the range of random projections in order to focus on certain areas.
 # Open Challenges
 
 .pull-left[
-- **Awareness** for other other objectives is often lacking.
+- **Awareness** for other objectives is often lacking.
   If they are not easily accessible users might just neglect them.
 
 - **Fairness** measures are often not well-defined and highly depend on context
@@ -232,4 +236,9 @@ florian.pfisterer@stat.uni-muenchen.de
 - Thomas, J., Coors, S., and Bischl, B. (2018).
   Automatic gradient boosting. 
   International Workshop on Automatic Machine Learning at ICML.
+  
+- Knowles, J. (2006)
+  ParEGO: a hybrid algorithm with on-line landscape approximation for expensive multiobjective optimization problems.
+  IEEE Transactions on Evolutionary Computation ( Volume: 10 , Issue: 1 , Feb. 2006 )
+
 
