@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Multi-Objective AutoML</title>
+    <title>Towards human-centered AutoML  Multi-Objective   AutoML</title>
     <meta charset="utf-8" />
     <meta name="author" content="Florian Pfisterer, Stefan Coors, Janek Thomas, Bernd Bischl" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
@@ -11,7 +11,7 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Multi-Objective AutoML
+# <strike>Towards human-centered AutoML</strike><br><br>Multi-Objective <br> AutoML
 ### Florian Pfisterer, Stefan Coors, Janek Thomas, Bernd Bischl
 ### LMU Munich
 ### 2019/07/02
@@ -40,18 +40,18 @@ class: center, middle, inverse, title-slide
 ---
 # A short intro to AutoML
 
-- Automatically obtain an optimal model for a dataset
-
-- Many different flavours exist!
+- Automatically obtain an *"optimal"* model for a dataset
 
 - The system performs model selection, tuning, ...
+
+- Many different flavours exist!
 
 ![:scale 100%](drawings/automl.png)
 
 
 ## Why? 
 - Many steps of the typical ML pipeline can be easily automized!
-- Computers are efficient in trying out many possibilities
+- Computers are efficient in trying out many possibilities.
 - Efficient search strategies exist!
 - Humans are single-threaded and have little RAM!
 
@@ -68,8 +68,10 @@ class: center, middle, inverse, title-slide
 
 ## Problem:
 
+To narrow focus on a single measure for predictive performance!
+
 Users either use AutoML without considering other objectives,
-or do everything manually!
+or do analysis manually!
 
 
 ---
@@ -91,6 +93,7 @@ or do everything manually!
   
     `\(Pr\{\hat{Y} = 1 | A = 0, Y = 1\} = Pr\{\hat{Y} = 1 | A = 1, Y = 1\}\)`
     
+- Further desiderata: Calibration
     
 ---
 # Interesting Objectives II:
@@ -111,13 +114,13 @@ or do everything manually!
 - Sparsity
 
   Even simple models with `\(1000's\)` of predictors are hard to grasp
-  
+
 ---
 # Interesting Objectives III:
   
 ## Robustness
 
-- Robustness to adversarial examples, perturbations , ...
+- Robustness to adversarial examples, perturbations , distribution shift, ...
   
 ## Memory and Inference Time
 
@@ -131,6 +134,7 @@ or do everything manually!
 .pull-left[
 - We propose a simplified AutoML system in order to explore the setting 
 
+Horse Race with 
 - Uses XGboost models, and a limited amount of preprocessing steps
 
 - Optimize using Multi-Objective Bayesian Optimization
@@ -205,7 +209,7 @@ We can limit the range of random projections in order to focus on certain areas.
 ---
 # Thank you for your attention!
 
-### Check out our progress:
+### Check out the progress:
 
 ```url
 https://github.com/pfistfl/autoxgboostMC
@@ -235,15 +239,6 @@ florian.pfisterer@stat.uni-muenchen.de
 - Knowles, J. (2006)
   ParEGO: a hybrid algorithm with on-line landscape approximation for expensive multiobjective optimization problems.
   IEEE Transactions on Evolutionary Computation ( Volume: 10 , Issue: 1 , Feb. 2006 )
-
----
-# Constraint vs. Multi-Objective Optimization
-
-- An alternative to our approach would be putting constraints on e.g fairness measures.
-
-  `\(\rightarrow\)` hard constraints (e.g. memory consumption during inference) can be useful
-  
-  `\(\rightarrow\)` In many cases, users want to choose the trade-off from the offered models.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

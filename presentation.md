@@ -1,5 +1,5 @@
 ---
-title: "<strike>Towards human-centered AutoML</strike><br><br>Multi-Objective <br> AutoML"
+title: "Multi-Objective AutoML"
 author: "Florian Pfisterer, Stefan Coors, Janek Thomas, Bernd Bischl"
 institute: "LMU Munich"
 date: "2019/07/02"
@@ -13,9 +13,7 @@ output:
       countIncrementalSlides: false
 ---
 
-```{r setup, include = FALSE}
-options(htmltools.dir.version = FALSE)
-```
+
 
 
 ![:scale 150%](drawings/plyr.png)
@@ -36,18 +34,18 @@ options(htmltools.dir.version = FALSE)
 ---
 # A short intro to AutoML
 
-- Automatically obtain an *"optimal"* model for a dataset
-
-- The system performs model selection, tuning, ...
+- Automatically obtain an optimal model for a dataset
 
 - Many different flavours exist!
+
+- The system performs model selection, tuning, ...
 
 ![:scale 100%](drawings/automl.png)
 
 
 ## Why? 
 - Many steps of the typical ML pipeline can be easily automized!
-- Computers are efficient in trying out many possibilities.
+- Computers are efficient in trying out many possibilities
 - Efficient search strategies exist!
 - Humans are single-threaded and have little RAM!
 
@@ -64,10 +62,8 @@ options(htmltools.dir.version = FALSE)
 
 ## Problem:
 
-To narrow focus on a single measure for predictive performance!
-
 Users either use AutoML without considering other objectives,
-or do analysis manually!
+or do everything manually!
 
 
 ---
@@ -89,7 +85,6 @@ or do analysis manually!
   
     $Pr\{\hat{Y} = 1 | A = 0, Y = 1\} = Pr\{\hat{Y} = 1 | A = 1, Y = 1\}$
     
-- Further desiderata: Calibration
     
 ---
 # Interesting Objectives II:
@@ -110,13 +105,13 @@ or do analysis manually!
 - Sparsity
 
   Even simple models with $1000's$ of predictors are hard to grasp
-
+  
 ---
 # Interesting Objectives III:
   
 ## Robustness
 
-- Robustness to adversarial examples, perturbations , distribution shift, ...
+- Robustness to adversarial examples, perturbations , ...
   
 ## Memory and Inference Time
 
@@ -130,7 +125,6 @@ or do analysis manually!
 .pull-left[
 - We propose a simplified AutoML system in order to explore the setting 
 
-Horse Race with 
 - Uses XGboost models, and a limited amount of preprocessing steps
 
 - Optimize using Multi-Objective Bayesian Optimization
@@ -140,9 +134,7 @@ Horse Race with
   - User specifies area, the optimization algorithm should focus in.
 ]
 
-```{css, echo=FALSE}
-.small{font-size: 12pt;}
-```
+
 
 .pull-right[
 ![:scale 90%](drawings/paretofront.png)
@@ -164,9 +156,7 @@ We can limit the range of random projections in order to focus on certain areas.
 
   .small[Pareto front for Fairness and MMCE after 20, 70 and 120 iterations.]
 
-```{css, echo=FALSE}
-.blue{color: blue;}
-```
+
 
 - Limit the range of random projections (weights for the measures) in order to focus on specific areas.
 
@@ -205,7 +195,7 @@ We can limit the range of random projections in order to focus on certain areas.
 ---
 # Thank you for your attention!
 
-### Check out the progress:
+### Check out our progress:
 
 ```url
 https://github.com/pfistfl/autoxgboostMC
@@ -235,3 +225,13 @@ florian.pfisterer@stat.uni-muenchen.de
 - Knowles, J. (2006)
   ParEGO: a hybrid algorithm with on-line landscape approximation for expensive multiobjective optimization problems.
   IEEE Transactions on Evolutionary Computation ( Volume: 10 , Issue: 1 , Feb. 2006 )
+
+---
+# Constraint vs. Multi-Objective Optimization
+
+- An alternative to our approach would be putting constraints on e.g fairness measures.
+
+  $\rightarrow$ hard constraints (e.g. memory consumption during inference) can be useful
+  
+  $\rightarrow$ In many cases, users want to choose the trade-off from the offered models.
+
