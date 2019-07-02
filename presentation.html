@@ -50,7 +50,7 @@ class: center, middle, inverse, title-slide
 
 
 ## Why? 
-- Many steps of the typical ML pipeline can be easily automized!
+- Many steps in the typical ML pipeline can be easily automized!
 - Computers are efficient in trying out many possibilities.
 - Efficient search strategies exist!
 - Humans are single-threaded and have little RAM!
@@ -61,18 +61,15 @@ class: center, middle, inverse, title-slide
 
 - Current AutoML approaches are **very good** at optimizing predictive performance!
 
-- Many applications require models that are *good* with respect to multiple 
+-  **But:** Many applications require models that trade of or are *good* with respect to multiple 
   objectives.
   
-- **But:** Current AutoML approaches do not really incorporate this!
-
 ## Problem:
 
 To narrow focus on a single measure for predictive performance!
 
 Users either use AutoML without considering other objectives,
 or do analysis manually!
-
 
 ---
 # Interesting Objectives:
@@ -93,7 +90,7 @@ or do analysis manually!
   
     `\(Pr\{\hat{Y} = 1 | A = 0, Y = 1\} = Pr\{\hat{Y} = 1 | A = 1, Y = 1\}\)`
     
-- Further desiderata: Calibration
+- Further desideratum: Calibration
     
 ---
 # Interesting Objectives II:
@@ -132,9 +129,8 @@ or do analysis manually!
 # AutoXgboostMC 
 
 .pull-left[
-- We propose a simplified AutoML system in order to explore the setting 
-
-Horse Race with 
+- We propose a simplified AutoML system (based on autoxgboost) in order to explore the setting 
+ 
 - Uses XGboost models, and a limited amount of preprocessing steps
 
 - Optimize using Multi-Objective Bayesian Optimization
@@ -151,7 +147,7 @@ Horse Race with
 .pull-right[
 ![:scale 90%](drawings/paretofront.png)
 .small[
-**parEgo** (Knowles, ) uses random projections in order to explore the pareto front.
+**parEgo** (Knowles, 2006) uses random projections in order to explore the pareto front.
 We can limit the range of random projections in order to focus on certain areas.
 ]
 ]
