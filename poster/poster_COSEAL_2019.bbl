@@ -1,0 +1,41 @@
+\begin{thebibliography}{1}
+
+\bibitem{mlr}
+Bernd Bischl, Michel Lang, Lars Kotthoff, Julia Schiffner, Jakob Richter, Erich
+  Studerus, Giuseppe Casalicchio, and Zachary~M. Jones.
+\newblock {mlr}: Machine learning in {R}.
+\newblock {\em Journal of Machine Learning Research}, 17(170):1--5, 2016.
+
+\bibitem{xgboost}
+Tianqi Chen and Carlos Guestrin.
+\newblock {XGBoost}: A scalable tree boosting system.
+\newblock In {\em Proceedings of the 22nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, KDD '16, pages 785--794, New York,
+  NY, USA, 2016. ACM.
+
+\bibitem{parego}
+Joshua Knowles.
+\newblock Parego: A hybrid algorithm with on-line landscape approximation for
+  expensive multiobjective optimization problems.
+\newblock Technical Report TR-COMPSYSBIO-2004-01, University of Manchester,
+  September 2004.
+
+\bibitem{molnar2019quantifying}
+Christoph Molnar, Giuseppe Casalicchio, and Bernd Bischl.
+\newblock Quantifying interpretability of arbitrary machine learning models
+  through functional decomposition.
+\newblock {\em arXiv preprint arXiv:1904.03867}, 2019.
+
+\bibitem{szegedy2013intriguing}
+Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
+  Ian Goodfellow, and Rob Fergus.
+\newblock Intriguing properties of neural networks.
+\newblock {\em arXiv preprint arXiv:1312.6199}, 2013.
+
+\bibitem{autoxgboost}
+Janek Thomas, Stefan Coors, and Bernd Bischl.
+\newblock Automatic gradient boosting.
+\newblock In {\em International Workshop on Automatic Machine Learning at
+  ICML}, 2018.
+
+\end{thebibliography}
