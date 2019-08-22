@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.20)  22 AUG 2019 10:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.20)  22 AUG 2019 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -895,7 +895,17 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \c@ContinuedFloat=\count148
 Package caption Info: float package is loaded.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesome.sty
+Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic
+.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdftex.
+tex)) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 
@@ -984,25 +994,25 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 (./poster_COSEAL_2019.aux)
 \openout1 = `poster_COSEAL_2019.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    ... okay on input line 85.
 
 ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1041,11 +1051,6 @@ Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
@@ -1104,11 +1109,11 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 84.
+LaTeX Font Info:    Try loading font information for U+msa on input line 85.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 84.
+LaTeX Font Info:    Try loading font information for U+msb on input line 85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1121,101 +1126,112 @@ Missing character: There is no 1 in font nullfont!
 <figures/automl_schema.pdf, id=29, 722.7pt x 406.51875pt>
 File: figures/automl_schema.pdf Graphic file (type pdf)
 <use figures/automl_schema.pdf>
-Package pdftex.def Info: figures/automl_schema.pdf  used on input line 117.
+Package pdftex.def Info: figures/automl_schema.pdf  used on input line 118.
 (pdftex.def)             Requested size: 1005.00386pt x 565.31993pt.
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 117.
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 118.
 
 
 (/usr/share/R/share/texmf/tex/latex/ts1aer.fd
 File: ts1aer.fd 
 )
 LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <29.86> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 117.
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 118.
 
-Overfull \hbox (4.39998pt too wide) in paragraph at lines 117--117
+Overfull \hbox (4.39998pt too wide) in paragraph at lines 118--118
  [][] 
  []
 
 
-Overfull \hbox (4.39998pt too wide) in paragraph at lines 117--117
+Overfull \hbox (4.39998pt too wide) in paragraph at lines 118--118
  [][] 
  []
 
 
-Overfull \hbox (4.39998pt too wide) in paragraph at lines 167--167
+Overfull \hbox (4.39998pt too wide) in paragraph at lines 168--168
 [][] 
  []
 
 
-Overfull \hbox (4.39998pt too wide) in paragraph at lines 167--167
+Overfull \hbox (4.39998pt too wide) in paragraph at lines 168--168
 [][] 
  []
 
 
-Overfull \hbox (4.39998pt too wide) in paragraph at lines 167--167
+Overfull \hbox (4.39998pt too wide) in paragraph at lines 168--168
 [][] 
  []
 
 
-Overfull \hbox (4.39998pt too wide) in paragraph at lines 192--192
+Overfull \hbox (4.39998pt too wide) in paragraph at lines 193--193
 [][] 
  []
 
 
-Overfull \hbox (4.39998pt too wide) in paragraph at lines 192--192
+Overfull \hbox (4.39998pt too wide) in paragraph at lines 193--193
 [][] 
  []
 
 
-Overfull \hbox (4.39998pt too wide) in paragraph at lines 192--192
+Overfull \hbox (4.39998pt too wide) in paragraph at lines 193--193
 [][] 
  []
 
 <figures/opt_path.png, id=30, 1304.875pt x 1028.84375pt>
 File: figures/opt_path.png Graphic file (type png)
 <use figures/opt_path.png>
-Package pdftex.def Info: figures/opt_path.png  used on input line 208.
+Package pdftex.def Info: figures/opt_path.png  used on input line 209.
 (pdftex.def)             Requested size: 883.17693pt x 696.37054pt.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 223.
+(./poster_COSEAL_2019.bbl)
+<figures/pareto_plots.pdf, id=32, 1084.05pt x 361.35pt>
+File: figures/pareto_plots.pdf Graphic file (type pdf)
+<use figures/pareto_plots.pdf>
+Package pdftex.def Info: figures/pareto_plots.pdf  used on input line 227.
+(pdftex.def)             Requested size: 1459.8964pt x 486.64908pt.
+LaTeX Font Info:    Try loading font information for U+fontawesometwo on input 
+line 244.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
+File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
+)
+LaTeX Font Info:    Try loading font information for T1+aett on input line 244.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Overfull \hbox (4.39998pt too wide) in paragraph at lines 223--223
+Overfull \hbox (4.39998pt too wide) in paragraph at lines 244--244
  [][] 
  []
 
-<figures/pareto_plots.pdf, id=32, 1084.05pt x 361.35pt>
-File: figures/pareto_plots.pdf Graphic file (type pdf)
-<use figures/pareto_plots.pdf>
-Package pdftex.def Info: figures/pareto_plots.pdf  used on input line 229.
-(pdftex.def)             Requested size: 1459.8964pt x 486.64908pt.
-(./poster_COSEAL_2019.bbl) [1
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/automl_schema.pd
-f> <./figures/opt_path.png> <./figures/pareto_plots.pdf>] (./poster_COSEAL_2019
-.aux) ) 
+f> <./figures/opt_path.png> <./figures/pareto_plots.pdf>]
+(./poster_COSEAL_2019.aux) ) 
 Here is how much of TeX's memory you used:
- 21708 strings out of 494798
- 444093 string characters out of 6176800
- 567003 words of memory out of 5000000
- 24494 multiletter control sequences out of 15000+600000
- 58222 words of font info for 122 fonts, out of 8000000 for 9000
+ 23195 strings out of 494798
+ 464367 string characters out of 6176800
+ 585497 words of memory out of 5000000
+ 25967 multiletter control sequences out of 15000+600000
+ 58538 words of font info for 123 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  62i,12n,92p,1028b,1437s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2986.pfb>
-Output written on poster_COSEAL_2019.pdf (1 page, 318038 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/font
+awesome/fontawesometwo.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-
+ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome/FontAweso
+me.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfrm2986.pfb>
+Output written on poster_COSEAL_2019.pdf (1 page, 325620 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 124 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

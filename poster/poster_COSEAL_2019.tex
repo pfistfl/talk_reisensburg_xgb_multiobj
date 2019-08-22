@@ -65,6 +65,7 @@
 \usepackage[latin1]{inputenc}
 \usepackage[noend]{algpseudocode}
 \usepackage[skip=2pt]{caption}
+\usepackage{fontawesome}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \newcommand{\tdef}{\Theta_{def}}
@@ -207,26 +208,8 @@ They often combine techniques from many different sub-fields of machine learning
   \end{centering}
   }
 \end{columns}
-  \block[titleinnersep=0.45cm]{Outlook}
-  {
-  \begin{minipage}{0.55\textwidth}
-  \begin{itemize}
-  \item Implement pre- and post-processing methods tailored to measures.
-  \item Add different optimizers (MO-Hyperband, more advanced multi-objective Bayesian Optimization).
-  \item Explore functionality in different use-cases.
-  \end{itemize}
-  \end{minipage}
-  \begin{minipage}{0.4\textwidth}
-    \centering
-    \innerblock{Github}{\url{https://github.com/pfistfl/autoxgboostMC}}
-  \end{minipage}
-  }
 \begin{columns}
-\column{0.65}
-  \block[titleinnersep=0.45cm]{Use Case: Pareto Set}{
-  \includegraphics[width=\linewidth]{figures/pareto_plots.pdf}
-  Pareto Front after $20$, $70$ and $120$ iterations. Grey line: Pareto front; blue: Focus area
-  }
+
 \column{0.35}
   \block[titleinnersep=0.45cm]{References}
     {
@@ -237,7 +220,28 @@ They often combine techniques from many different sub-fields of machine learning
       \bibliography{jmlr-bib}
     \endgroup
     }
+\column{0.65}
+  \block[titleinnersep=0.45cm]{Application: Pareto Set}{
+  \includegraphics[width=\linewidth]{figures/pareto_plots.pdf}
+  Pareto Front after $20$, $70$ and $120$ iterations. Grey line: Pareto front; blue: Focus area
+  }
 \end{columns}
+
+
+\block[titleinnersep=0.45cm]{Outlook}
+{
+\begin{minipage}{0.55\textwidth}
+\begin{itemize}
+\item Implement pre- and post-processing methods tailored to measures.
+\item Add different optimizers (MO-Hyperband, more advanced multi-objective Bayesian Optimization).
+\item Explore functionality in different use-cases.
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+  \centering
+  \innerblock{Github}{ \faGithub \hspace{.5cm} \url{https://github.com/pfistfl/autoxgboostMC}}
+\end{minipage}
+}
 \nocite{mlr}
 \end{document}
 
