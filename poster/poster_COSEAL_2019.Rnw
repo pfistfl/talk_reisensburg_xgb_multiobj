@@ -53,7 +53,7 @@ They often combine techniques from many different sub-fields of machine learning
   \begin{itemize}
     \item Some ML applications require optimizing multiple objectives at the same time.
     \item This is currently not possible in existing AutoML frameworks
-    \item Awareness for multiple objectives often does not exist
+    \item Awareness for multiple objectives does also often not exist!
   \end{itemize}
   }
   \vspace{0.4cm}
@@ -64,6 +64,7 @@ They often combine techniques from many different sub-fields of machine learning
     \item We demonstrate our implementation in a use-case
   \end{itemize}
   }
+    \vspace{-.2cm}
   }
   % \block[titleinnersep=0.45cm]{Motivation}
   % {
@@ -84,9 +85,9 @@ They often combine techniques from many different sub-fields of machine learning
   {
   \innerblock{Fairness}{
   \begin{itemize}
-    \item Independence
-    \[
-    Pr\{Y_b = 1 | A = 0, Y = 1\} = Pr\{Y_b = 1 | A = 1, Y = 1\}
+    \item Sufficiency
+     \[
+    Pr\{Y_b = 1 | A = 0, Y = y\} = Pr\{Y_b = 1 | A = 1, Y = y\}, y \in \{0, 1\}
     \]
     $\rightarrow$ Minimize the absolute difference in FPR, FNR, ... between two sub-populations.
   \end{itemize}
@@ -131,29 +132,30 @@ They often combine techniques from many different sub-fields of machine learning
   \max_{i=1,\dots,k}(w_if_i(\theta)) +\rho\sum_{i=i}^kw_if_i(\theta),
   \]
   with a different uniformly sampled weight vector $w$ such that $\sum_{i=1}^kw_i=1$ in each iteration.
+  We can limit the range of projections $w_i$ to focus on certain area's of the pareto front.
   }
   \innerblock{Sub-evaluations}{
     As threshold-tuning and early-stopping are no longer trivial, after each iteration,
     we add different models with $n < nrounds$ and different classification thresholds to the pareto front.
     These can be obtained cheaply for a fixed model.
   }
+  \vspace{-.2cm}
   }
   \block[titleinnersep=0.45cm]{Application}
   {
   The Adult dataset contains $48842$ observations of $14$ features, including $6$
   numeric and $8$ factor features describing age, sex, education, marital status, race and more.
   The aim is to predict whether a person's income is below or above 50 k\$ a year.
-  We use the mean missclassification error as a performance measure for predictive performance.
-  Additionally, we aim to assure fairness regarding a person's sex, i.e. we would like to obtain a model
-  that performs equally good regardless of which sub-population we are considering.
+  We use the mean missclassification error and aim to assure fairness regarding a person's sex.
+  We want a model, that performs equally good regardless of which sub-population we are considering.
   As a fairness measure we use the absolute difference in F1-Scores between two sub-populations \textit{male} and \textit{female}.
 
   \vspace{.4cm}
   \begin{centering}
   \includegraphics[width=0.8\linewidth]{figures/opt_path.png}
-  \end{centering}
 
   Tuning progress of the AutoML system on internal validation data.
+  \end{centering}
   }
 \end{columns}
   \block[titleinnersep=0.45cm]{Outlook}
